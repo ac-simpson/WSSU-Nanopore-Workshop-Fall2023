@@ -1,0 +1,236 @@
+Jan-25 10:02:55.259 [main] DEBUG nextflow.cli.Launcher - $> nextflow run epi2me-labs/wf-metagenomics --fastq data/Zymo_16S_SRR25400687.fastq --out_dir Epi2me_results/Zymo_16S_SRR25400687_Epi2me --database_set ncbi_16s_18s
+Jan-25 10:02:55.327 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.04.3
+Jan-25 10:02:55.347 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/asimpson/.nextflow/plugins; core-plugins: nf-amazon@1.16.2,nf-azure@1.0.1,nf-codecommit@0.1.4,nf-console@1.0.5,nf-ga4gh@1.0.5,nf-google@1.7.3,nf-tower@1.5.12,nf-wave@0.8.4
+Jan-25 10:02:55.357 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jan-25 10:02:55.358 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jan-25 10:02:55.362 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Jan-25 10:02:55.370 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jan-25 10:02:55.390 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /Users/asimpson/.nextflow/scm
+Jan-25 10:02:56.105 [main] DEBUG nextflow.scm.AssetManager - Git config: /Users/asimpson/.nextflow/assets/epi2me-labs/wf-metagenomics/.git/config; branch: master; remote: origin; url: https://github.com/epi2me-labs/wf-metagenomics.git
+Jan-25 10:02:56.125 [main] DEBUG nextflow.scm.RepositoryFactory - Found Git repository result: [RepositoryFactory]
+Jan-25 10:02:56.133 [main] DEBUG nextflow.scm.AssetManager - Git config: /Users/asimpson/.nextflow/assets/epi2me-labs/wf-metagenomics/.git/config; branch: master; remote: origin; url: https://github.com/epi2me-labs/wf-metagenomics.git
+Jan-25 10:02:57.664 [main] INFO  nextflow.scm.AssetManager - NOTE: Your local project version looks outdated - a different revision is available in the remote repository [4397263427]
+Jan-25 10:02:57.672 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /Users/asimpson/.nextflow/assets/epi2me-labs/wf-metagenomics/nextflow.config
+Jan-25 10:02:57.673 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/asimpson/.nextflow/assets/epi2me-labs/wf-metagenomics/nextflow.config
+Jan-25 10:02:57.683 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Jan-25 10:02:57.835 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Jan-25 10:02:57.835 [main] INFO  nextflow.cli.CmdRun - Launching `https://github.com/epi2me-labs/wf-metagenomics` [modest_joliot] DSL2 - revision: 54e6d3e743 [master]
+Jan-25 10:02:57.836 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jan-25 10:02:57.836 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Jan-25 10:02:57.838 [main] DEBUG nextflow.secret.LocalSecretsProvider - Secrets store: /Users/asimpson/.nextflow/secrets/store.json
+Jan-25 10:02:57.841 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@1e3f86d5] - activable => nextflow.secret.LocalSecretsProvider@1e3f86d5
+Jan-25 10:02:57.905 [main] DEBUG nextflow.Session - Session UUID: 633ea2d5-82ed-4e05-ac3a-7f8a8eb5e09a
+Jan-25 10:02:57.906 [main] DEBUG nextflow.Session - Run name: modest_joliot
+Jan-25 10:02:57.906 [main] DEBUG nextflow.Session - Executor pool size: 16
+Jan-25 10:02:57.918 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=48; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Jan-25 10:02:57.937 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.04.3 build 5875
+  Created: 11-08-2023 18:37 UTC (11:37 PDT)
+  System: Mac OS X 13.6.3
+  Runtime: Groovy 3.0.16 on Java HotSpot(TM) 64-Bit Server VM 20.0.2+9-78
+  Encoding: UTF-8 (UTF-8)
+  Process: 60045@MT-211700 [137.79.238.104]
+  CPUs: 16 - Mem: 32 GB (253.9 MB) - Swap: 1 GB (832.2 MB)
+Jan-25 10:02:57.950 [main] DEBUG nextflow.Session - Work-dir: /Users/asimpson/Documents/GitHub/WSSU-Nanopore-Workshop-Fall2023/work [Mac OS X]
+Jan-25 10:02:57.968 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jan-25 10:02:57.977 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jan-25 10:02:58.055 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jan-25 10:02:58.064 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 17; maxThreads: 1000
+Jan-25 10:02:58.126 [main] DEBUG nextflow.Session - Session start
+Jan-25 10:02:58.131 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /Users/asimpson/Documents/GitHub/WSSU-Nanopore-Workshop-Fall2023/Epi2me_results/Zymo_16S_SRR25400687_Epi2me/execution/trace.txt
+Jan-25 10:02:58.142 [main] DEBUG nextflow.Session - Using default localLib path: /Users/asimpson/.nextflow/assets/epi2me-labs/wf-metagenomics/lib
+Jan-25 10:02:58.145 [main] DEBUG nextflow.Session - Adding to the classpath library: /Users/asimpson/.nextflow/assets/epi2me-labs/wf-metagenomics/lib
+Jan-25 10:02:58.146 [main] DEBUG nextflow.Session - Adding to the classpath library: /Users/asimpson/.nextflow/assets/epi2me-labs/wf-metagenomics/lib/nfcore_external_java_deps.jar
+Jan-25 10:02:59.417 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jan-25 10:03:01.273 [main] WARN  nextflow.NextflowMeta$Preview - NEXTFLOW RECURSION IS A PREVIEW FEATURE - SYNTAX AND FUNCTIONALITY CAN CHANGE IN FUTURE RELEASES
+Jan-25 10:03:01.394 [main] INFO  nextflow.Nextflow - 
+[0;92m||||||||||   [0m[2m_____ ____ ___ ____  __  __ _____      _       _
+[0;92m||||||||||  [0m[2m| ____|  _ \_ _|___ \|  \/  | ____|    | | __ _| |__  ___
+[0;33m|||||       [0m[2m|  _| | |_) | |  __) | |\/| |  _| _____| |/ _` | '_ \/ __|
+[0;33m|||||       [0m[2m| |___|  __/| | / __/| |  | | |__|_____| | (_| | |_) \__ \
+[0;94m||||||||||  [0m[2m|_____|_|  |___|_____|_|  |_|_____|    |_|\__,_|_.__/|___/
+[0;94m||||||||||  [0m[1mwf-metagenomics v2.5.0-g54e6d3e[0m
+[2m--------------------------------------------------------------------------------[0m
+[1mCore Nextflow options[0m
+  [0;34mrevision       : [0;32mmaster[0m
+  [0;34mrunName        : [0;32mmodest_joliot[0m
+  [0;34mcontainerEngine: [0;32mdocker[0m
+  [0;34mlaunchDir      : [0;32m/Users/asimpson/Documents/GitHub/WSSU-Nanopore-Workshop-Fall2023[0m
+  [0;34mworkDir        : [0;32m/Users/asimpson/Documents/GitHub/WSSU-Nanopore-Workshop-Fall2023/work[0m
+  [0;34mprojectDir     : [0;32m/Users/asimpson/.nextflow/assets/epi2me-labs/wf-metagenomics[0m
+  [0;34muserName       : [0;32masimpson[0m
+  [0;34mprofile        : [0;32mstandard[0m
+  [0;34mconfigFiles    : [0;32m/Users/asimpson/.nextflow/assets/epi2me-labs/wf-metagenomics/nextflow.config[0m
+
+[1mInput Options[0m
+  [0;34mfastq          : [0;32mdata/Zymo_16S_SRR25400687.fastq[0m
+
+[1mReference Options[0m
+  [0;34mdatabase_sets  : [0;32m[ncbi_16s_18s:[reference:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s/ncbi_targeted_loci_16s_18s.fna, refindex:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s/ncbi_targeted_loci_16s_18s.fna.fai, database:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s/ncbi_targeted_loci_kraken2.tar.gz, kmer_dist:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s/database1000mers.kmer_distrib, ref2taxid:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s/ref2taxid.targloci.tsv, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/taxdmp_2023-01-01.zip], ncbi_16s_18s_28s_ITS:[reference:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS.fna, refindex:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS.fna.fai, database:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s_28s_ITS/ncbi_16s_18s_28s_ITS_kraken2.tar.gz, kmer_dist:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s_28s_ITS/database1000mers.kmer_distrib, ref2taxid:https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s_28s_ITS/ref2taxid.ncbi_16s_18s_28s_ITS.tsv, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/taxdmp_2023-01-01.zip], SILVA_138_1:[database:null], PlusPF-8:[database:https://genome-idx.s3.amazonaws.com/kraken/k2_pluspf_08gb_20230314.tar.gz, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/new_taxdump_2023-03-01.zip], PlusPFP-8:[database:https://genome-idx.s3.amazonaws.com/kraken/k2_pluspfp_08gb_20230314.tar.gz, taxonomy:https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/new_taxdump_2023-03-01.zip]][0m
+
+[1mOutput Options[0m
+  [0;34mout_dir        : [0;32mEpi2me_results/Zymo_16S_SRR25400687_Epi2me[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+[2m--------------------------------------------------------------------------------[0m
+If you use epi2me-labs/wf-metagenomics for your analysis please cite:
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+
+[2m--------------------------------------------------------------------------------[0m
+This is epi2me-labs/wf-metagenomics v2.5.0-g54e6d3e.
+[2m--------------------------------------------------------------------------------[0m
+Jan-25 10:03:02.090 [main] INFO  nextflow.Nextflow - Checking inputs.
+Jan-25 10:03:02.103 [main] INFO  nextflow.Nextflow - Checking fastq input.
+Jan-25 10:03:02.214 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:wf_common` matches labels `fastq_ingress,wf_common` for process with name fastcat
+Jan-25 10:03:02.219 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-25 10:03:02.219 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-25 10:03:02.225 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jan-25 10:03:02.231 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=8 GB; capacity=16; pollInterval=100ms; dumpInterval=5m
+Jan-25 10:03:02.301 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:wfmetagenomics` matches labels `wfmetagenomics` for process with name kraken_pipeline:unpackTaxonomy
+Jan-25 10:03:02.302 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-25 10:03:02.302 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-25 10:03:02.305 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:wfmetagenomics` matches labels `wfmetagenomics` for process with name kraken_pipeline:unpackDatabase
+Jan-25 10:03:02.305 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-25 10:03:02.305 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-25 10:03:02.308 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:wfmetagenomics` matches labels `wfmetagenomics` for process with name kraken_pipeline:determine_bracken_length
+Jan-25 10:03:02.309 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-25 10:03:02.309 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-25 10:03:02.313 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:wfmetagenomics` matches labels `wfmetagenomics` for process with name kraken_pipeline:kraken_server
+Jan-25 10:03:02.314 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-25 10:03:02.314 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-25 10:03:02.316 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:wfmetagenomics` matches labels `wfmetagenomics` for process with name kraken_pipeline:run_common:getVersions
+Jan-25 10:03:02.316 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-25 10:03:02.316 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-25 10:03:02.318 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:wfmetagenomics` matches labels `wfmetagenomics` for process with name kraken_pipeline:run_common:getParams
+Jan-25 10:03:02.318 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-25 10:03:02.318 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-25 10:03:02.322 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:wfmetagenomics` matches labels `wfmetagenomics` for process with name kraken_pipeline:kraken2_client
+Jan-25 10:03:02.323 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-25 10:03:02.323 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-25 10:03:02.334 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:wfmetagenomics` matches labels `wfmetagenomics` for process with name kraken_pipeline:progressive_stats
+Jan-25 10:03:02.334 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-25 10:03:02.334 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-25 10:03:02.348 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:wfmetagenomics` matches labels `wfmetagenomics` for process with name kraken_pipeline:progressive_kraken_reports
+Jan-25 10:03:02.349 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-25 10:03:02.349 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-25 10:03:02.366 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:wfmetagenomics` matches labels `wfmetagenomics` for process with name kraken_pipeline:progressive_bracken
+Jan-25 10:03:02.366 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-25 10:03:02.366 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-25 10:03:02.372 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:wfmetagenomics` matches labels `wfmetagenomics` for process with name kraken_pipeline:makeReport
+Jan-25 10:03:02.373 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-25 10:03:02.373 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-25 10:03:02.378 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:wfmetagenomics` matches labels `wfmetagenomics` for process with name kraken_pipeline:output
+Jan-25 10:03:02.379 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-25 10:03:02.379 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-25 10:03:02.384 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:wfmetagenomics` matches labels `wfmetagenomics` for process with name kraken_pipeline:stop_kraken_server
+Jan-25 10:03:02.385 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Jan-25 10:03:02.385 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jan-25 10:03:02.389 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: concatAssignments, unpackDatabase, kraken_server, validate_sample_sheet, kraken_pipeline:run_common:getVersions, kraken_pipeline:unpackTaxonomy, kraken_pipeline:stop_kraken_server, kraken_pipeline:kraken2_client, progressive_stats, kraken_pipeline:progressive_stats, output, stop_kraken_server, kraken_pipeline:makeReport, abricate, makeReport, progressive_amr, minimap, getVersions, kraken_pipeline:progressive_kraken_reports, unpackTaxonomy, extractMinimap2Reads, rebatchFastq, kraken_pipeline:unpackDatabase, check_reference_ref2taxid, kraken2_client, prepareSILVA, output_host, progressive_bracken, move_or_compress, determine_bracken_length, progressive_kraken_reports, fastcat, kraken_pipeline:determine_bracken_length, stopCondition, abricateVersion, kraken_pipeline:kraken_server, exclude_host_reads, getParams, abricate_json, kraken_pipeline:run_common:getParams, kraken_pipeline:progressive_bracken, kraken_pipeline:output
+Jan-25 10:03:02.390 [main] DEBUG nextflow.Session - Igniting dataflow network (26)
+Jan-25 10:03:02.391 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > fastcat
+Jan-25 10:03:02.391 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > kraken_pipeline:unpackTaxonomy
+Jan-25 10:03:02.391 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > kraken_pipeline:unpackDatabase
+Jan-25 10:03:02.391 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > kraken_pipeline:determine_bracken_length
+Jan-25 10:03:02.391 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > kraken_pipeline:kraken_server
+Jan-25 10:03:02.392 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > kraken_pipeline:run_common:getVersions
+Jan-25 10:03:02.392 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > kraken_pipeline:run_common:getParams
+Jan-25 10:03:02.392 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > kraken_pipeline:kraken2_client
+Jan-25 10:03:02.392 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > kraken_pipeline:progressive_stats
+Jan-25 10:03:02.392 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > kraken_pipeline:progressive_kraken_reports
+Jan-25 10:03:02.392 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > kraken_pipeline:progressive_bracken
+Jan-25 10:03:02.398 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > kraken_pipeline:makeReport
+Jan-25 10:03:02.398 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > kraken_pipeline:output
+Jan-25 10:03:02.398 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > kraken_pipeline:stop_kraken_server
+Jan-25 10:03:02.398 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Jan-25 10:03:02.398 [main] DEBUG nextflow.Session - Session await
+Jan-25 10:03:02.511 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jan-25 10:03:02.514 [Task submitter] INFO  nextflow.Session - [cf/6ae75c] Submitted process > kraken_pipeline:run_common:getParams
+Jan-25 10:03:02.520 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jan-25 10:03:02.521 [Task submitter] INFO  nextflow.Session - [b7/3aed0e] Submitted process > fastcat (1)
+Jan-25 10:03:02.527 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jan-25 10:03:02.527 [Task submitter] INFO  nextflow.Session - [38/b6e6d8] Submitted process > kraken_pipeline:run_common:getVersions
+Jan-25 10:03:04.939 [FileTransfer-1] DEBUG nextflow.file.FilePorter - Copying foreign file https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/taxdmp_2023-01-01.zip to work dir: /Users/asimpson/Documents/GitHub/WSSU-Nanopore-Workshop-Fall2023/work/stage-633ea2d5-82ed-4e05-ac3a-7f8a8eb5e09a/cd/d98b33479f2f6d0440ec92c5b3116a/taxdmp_2023-01-01.zip
+Jan-25 10:03:04.939 [FileTransfer-2] DEBUG nextflow.file.FilePorter - Copying foreign file https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s/ncbi_targeted_loci_kraken2.tar.gz to work dir: /Users/asimpson/Documents/GitHub/WSSU-Nanopore-Workshop-Fall2023/work/stage-633ea2d5-82ed-4e05-ac3a-7f8a8eb5e09a/ff/448bda6df13b7b58ca45d3911125c9/ncbi_targeted_loci_kraken2.tar.gz
+Jan-25 10:03:04.940 [FileTransfer-3] DEBUG nextflow.file.FilePorter - Copying foreign file https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s/database1000mers.kmer_distrib to work dir: /Users/asimpson/Documents/GitHub/WSSU-Nanopore-Workshop-Fall2023/work/stage-633ea2d5-82ed-4e05-ac3a-7f8a8eb5e09a/18/b5b8a30b83d374d3006600ce4ef5bb/database1000mers.kmer_distrib
+Jan-25 10:03:06.942 [Actor Thread 9] INFO  nextflow.file.FilePorter - Staging foreign file: https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump_archive/taxdmp_2023-01-01.zip
+Jan-25 10:03:06.942 [Actor Thread 6] INFO  nextflow.file.FilePorter - Staging foreign file: https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s/ncbi_targeted_loci_kraken2.tar.gz
+Jan-25 10:03:07.527 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: kraken_pipeline:run_common:getParams; status: COMPLETED; exit: 0; error: -; workDir: /Users/asimpson/Documents/GitHub/WSSU-Nanopore-Workshop-Fall2023/work/cf/6ae75cfe3e4efd0a61191cc980cff2]
+Jan-25 10:03:07.559 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jan-25 10:03:07.560 [Task submitter] INFO  nextflow.Session - [d4/fe696f] Submitted process > kraken_pipeline:output (1)
+Jan-25 10:03:08.906 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: kraken_pipeline:output (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/asimpson/Documents/GitHub/WSSU-Nanopore-Workshop-Fall2023/work/d4/fe696f9e4553b734e53416459df812]
+Jan-25 10:03:08.918 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=48; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Jan-25 10:03:08.949 [Actor Thread 6] INFO  nextflow.file.FilePorter - Staging foreign file: https://ont-exd-int-s3-euwst1-epi2me-labs.s3.amazonaws.com/wf-metagenomics/ncbi_16s_18s/database1000mers.kmer_distrib
+Jan-25 10:03:11.286 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: kraken_pipeline:run_common:getVersions; status: COMPLETED; exit: 0; error: -; workDir: /Users/asimpson/Documents/GitHub/WSSU-Nanopore-Workshop-Fall2023/work/38/b6e6d8d463d8361d92e55786ed3752]
+Jan-25 10:03:11.297 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jan-25 10:03:11.298 [Task submitter] INFO  nextflow.Session - [ca/98d128] Submitted process > kraken_pipeline:output (2)
+Jan-25 10:03:12.470 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: kraken_pipeline:output (2); status: COMPLETED; exit: 0; error: -; workDir: /Users/asimpson/Documents/GitHub/WSSU-Nanopore-Workshop-Fall2023/work/ca/98d12839629c31f6fdfdd807b0993c]
+Jan-25 10:03:26.295 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jan-25 10:03:26.296 [Task submitter] INFO  nextflow.Session - [b1/d5b4a4] Submitted process > kraken_pipeline:unpackDatabase
+Jan-25 10:03:31.953 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: kraken_pipeline:unpackDatabase; status: COMPLETED; exit: 0; error: -; workDir: /Users/asimpson/Documents/GitHub/WSSU-Nanopore-Workshop-Fall2023/work/b1/d5b4a4672e3854dc7bfa08bc362a48]
+Jan-25 10:03:31.984 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jan-25 10:03:31.984 [Task submitter] INFO  nextflow.Session - [db/502c5c] Submitted process > kraken_pipeline:determine_bracken_length
+Jan-25 10:03:32.014 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jan-25 10:03:32.015 [Task submitter] INFO  nextflow.Session - [e0/5937cf] Submitted process > kraken_pipeline:kraken_server
+Jan-25 10:03:33.588 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: kraken_pipeline:determine_bracken_length; status: COMPLETED; exit: 0; error: -; workDir: /Users/asimpson/Documents/GitHub/WSSU-Nanopore-Workshop-Fall2023/work/db/502c5cb0ad84e0ddbba87c73416542]
+Jan-25 10:03:47.993 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jan-25 10:03:47.993 [Task submitter] INFO  nextflow.Session - [cf/cdbaa6] Submitted process > kraken_pipeline:unpackTaxonomy
+Jan-25 10:04:04.838 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: kraken_pipeline:unpackTaxonomy; status: COMPLETED; exit: 0; error: -; workDir: /Users/asimpson/Documents/GitHub/WSSU-Nanopore-Workshop-Fall2023/work/cf/cdbaa6bccab9ca8bf32e4a48a19f49]
+Jan-25 10:04:06.417 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: fastcat (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/asimpson/Documents/GitHub/WSSU-Nanopore-Workshop-Fall2023/work/b7/3aed0ea9b6485edf031bdfe2887b6c]
+Jan-25 10:04:06.452 [Actor Thread 7] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /Users/asimpson/.nextflow/assets/epi2me-labs/wf-metagenomics/bin/workflow-glue
+Jan-25 10:04:06.465 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jan-25 10:04:06.465 [Task submitter] INFO  nextflow.Session - [3c/0138db] Submitted process > kraken_pipeline:kraken2_client (1)
+Jan-25 10:07:39.996 [SIGINT handler] DEBUG nextflow.Session - Session aborted -- Cause: SIGINT
+Jan-25 10:07:40.024 [SIGINT handler] DEBUG nextflow.Session - The following nodes are still active:
+[process] kraken_pipeline:progressive_stats
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: fastcat_stats
+  port 1: (cntrl) -     ; channel: $
+
+[process] kraken_pipeline:progressive_kraken_reports
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: kreport
+  port 1: (queue) OPEN  ; channel: sample_ids
+  port 2: (value) bound ; channel: taxonomy
+  port 3: (cntrl) -     ; channel: $
+
+[process] kraken_pipeline:progressive_bracken
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: inputs
+  port 1: (queue) OPEN  ; channel: sample_ids
+  port 2: (value) bound ; channel: -
+  port 3: (cntrl) -     ; channel: $
+
+[process] kraken_pipeline:makeReport
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: lineages
+  port 1: (queue) OPEN  ; channel: -
+  port 2: (value) bound ; channel: amr
+  port 3: (cntrl) -     ; channel: $
+
+[process] kraken_pipeline:output
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] kraken_pipeline:stop_kraken_server
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: stop
+  port 1: (cntrl) -     ; channel: $
+
+Jan-25 10:07:40.812 [main] DEBUG nextflow.Session - Session await > all processes finished
+Jan-25 10:07:40.812 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jan-25 10:07:40.815 [Actor Thread 2] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=kraken_pipeline:progressive_kraken_reports; work-dir=null
+  error [java.lang.InterruptedException]: java.lang.InterruptedException
+Jan-25 10:07:40.998 [main] WARN  n.processor.TaskPollingMonitor - Killing running tasks (2)
+Jan-25 10:07:41.044 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=8; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=2; succeedDuration=3m 22s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=3; peakCpus=6; peakMemory=0; ]
+Jan-25 10:07:41.044 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Jan-25 10:07:41.047 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Jan-25 10:07:41.094 [main] DEBUG nextflow.trace.ReportObserver - Execution report summary data:
+  [{"cpuUsage":{"mean":47.1,"min":47.1,"q1":47.1,"q2":47.1,"q3":47.1,"max":47.1,"minLabel":"kraken_pipeline:run_common:getParams","maxLabel":"kraken_pipeline:run_common:getParams","q1Label":"kraken_pipeline:run_common:getParams","q2Label":"kraken_pipeline:run_common:getParams","q3Label":"kraken_pipeline:run_common:getParams"},"process":"getParams","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":{"mean":60821,"min":60821,"q1":60821,"q2":60821,"q3":60821,"max":60821,"minLabel":"kraken_pipeline:run_common:getParams","maxLabel":"kraken_pipeline:run_common:getParams","q1Label":"kraken_pipeline:run_common:getParams","q2Label":"kraken_pipeline:run_common:getParams","q3Label":"kraken_pipeline:run_common:getParams"},"cpu":{"mean":47.1,"min":47.1,"q1":47.1,"q2":47.1,"q3":47.1,"max":47.1,"minLabel":"kraken_pipeline:run_common:getParams","maxLabel":"kraken_pipeline:run_common:getParams","q1Label":"kraken_pipeline:run_common:getParams","q2Label":"kraken_pipeline:run_common:getParams","q3Label":"kraken_pipeline:run_common:getParams"},"time":{"mean":24,"min":24,"q1":24,"q2":24,"q3":24,"max":24,"minLabel":"kraken_pipeline:run_common:getParams","maxLabel":"kraken_pipeline:run_common:getParams","q1Label":"kraken_pipeline:run_common:getParams","q2Label":"kraken_pipeline:run_common:getParams","q3Label":"kraken_pipeline:run_common:getParams"},"writes":{"mean":4436,"min":4436,"q1":4436,"q2":4436,"q3":4436,"max":4436,"minLabel":"kraken_pipeline:run_common:getParams","maxLabel":"kraken_pipeline:run_common:getParams","q1Label":"kraken_pipeline:run_common:getParams","q2Label":"kraken_pipeline:run_common:getParams","q3Label":"kraken_pipeline:run_common:getParams"}},{"cpuUsage":{"mean":101.35,"min":96,"q1":98.68,"q2":101.35,"q3":104.03,"max":106.7,"minLabel":"kraken_pipeline:output (1)","maxLabel":"kraken_pipeline:output (2)","q1Label":"kraken_pipeline:output (1)","q2Label":"kraken_pipeline:output (1)","q3Label":"kraken_pipeline:output (1)"},"process":"output","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":{"mean":56500,"min":56496,"q1":56498,"q2":56500,"q3":56502,"max":56504,"minLabel":"kraken_pipeline:output (1)","maxLabel":"kraken_pipeline:output (2)","q1Label":"kraken_pipeline:output (1)","q2Label":"kraken_pipeline:output (1)","q3Label":"kraken_pipeline:output (1)"},"cpu":{"mean":101.35,"min":96,"q1":98.68,"q2":101.35,"q3":104.03,"max":106.7,"minLabel":"kraken_pipeline:output (1)","maxLabel":"kraken_pipeline:output (2)","q1Label":"kraken_pipeline:output (1)","q2Label":"kraken_pipeline:output (1)","q3Label":"kraken_pipeline:output (1)"},"time":{"mean":13,"min":10,"q1":11.5,"q2":13,"q3":14.5,"max":16,"minLabel":"kraken_pipeline:output (2)","maxLabel":"kraken_pipeline:output (1)","q1Label":"kraken_pipeline:output (2)","q2Label":"kraken_pipeline:output (2)","q3Label":"kraken_pipeline:output (2)"},"writes":{"mean":191,"min":190,"q1":190.5,"q2":191,"q3":191.5,"max":192,"minLabel":"kraken_pipeline:output (1)","maxLabel":"kraken_pipeline:output (2)","q1Label":"kraken_pipeline:output (1)","q2Label":"kraken_pipeline:output (1)","q3Label":"kraken_pipeline:output (1)"}},{"cpuUsage":{"mean":105.9,"min":105.9,"q1":105.9,"q2":105.9,"q3":105.9,"max":105.9,"minLabel":"kraken_pipeline:run_common:getVersions","maxLabel":"kraken_pipeline:run_common:getVersions","q1Label":"kraken_pipeline:run_common:getVersions","q2Label":"kraken_pipeline:run_common:getVersions","q3Label":"kraken_pipeline:run_common:getVersions"},"process":"getVersions","mem":{"mean":68509696,"min":68509696,"q1":68509696,"q2":68509696,"q3":68509696,"max":68509696,"minLabel":"kraken_pipeline:run_common:getVersions","maxLabel":"kraken_pipeline:run_common:getVersions","q1Label":"kraken_pipeline:run_common:getVersions","q2Label":"kraken_pipeline:run_common:getVersions","q3Label":"kraken_pipeline:run_common:getVersions"},"memUsage":null,"timeUsage":null,"vmem":{"mean":1123958784,"min":1123958784,"q1":1123958784,"q2":1123958784,"q3":1123958784,"max":1123958784,"minLabel":"kraken_pipeline:run_common:getVersions","maxLabel":"kraken_pipeline:run_common:getVersions","q1Label":"kraken_pipeline:run_common:getVersions","q2Label":"kraken_pipeline:run_common:getVersions","q3Label":"kraken_pipeline:run_common:getVersions"},"reads":{"mean":12720294,"min":12720294,"q1":12720294,"q2":12720294,"q3":12720294,"max":12720294,"minLabel":"kraken_pipeline:run_common:getVersions","maxLabel":"kraken_pipeline:run_common:getVersions","q1Label":"kraken_pipeline:run_common:getVersions","q2Label":"kraken_pipeline:run_common:getVersions","q3Label":"kraken_pipeline:run_common:getVersions"},"cpu":{"mean":105.9,"min":105.9,"q1":105.9,"q2":105.9,"q3":105.9,"max":105.9,"minLabel":"kraken_pipeline:run_common:getVersions","maxLabel":"kraken_pipeline:run_common:getVersions","q1Label":"kraken_pipeline:run_common:getVersions","q2Label":"kraken_pipeline:run_common:getVersions","q3Label":"kraken_pipeline:run_common:getVersions"},"time":{"mean":3924,"min":3924,"q1":3924,"q2":3924,"q3":3924,"max":3924,"minLabel":"kraken_pipeline:run_common:getVersions","maxLabel":"kraken_pipeline:run_common:getVersions","q1Label":"kraken_pipeline:run_common:getVersions","q2Label":"kraken_pipeline:run_common:getVersions","q3Label":"kraken_pipeline:run_common:getVersions"},"writes":{"mean":9143989,"min":9143989,"q1":9143989,"q2":9143989,"q3":9143989,"max":9143989,"minLabel":"kraken_pipeline:run_common:getVersions","maxLabel":"kraken_pipeline:run_common:getVersions","q1Label":"kraken_pipeline:run_common:getVersions","q2Label":"kraken_pipeline:run_common:getVersions","q3Label":"kraken_pipeline:run_common:getVersions"}},{"cpuUsage":{"mean":19.3,"min":19.3,"q1":19.3,"q2":19.3,"q3":19.3,"max":19.3,"minLabel":"kraken_pipeline:unpackDatabase","maxLabel":"kraken_pipeline:unpackDatabase","q1Label":"kraken_pipeline:unpackDatabase","q2Label":"kraken_pipeline:unpackDatabase","q3Label":"kraken_pipeline:unpackDatabase"},"process":"unpackDatabase","mem":{"mean":6979584,"min":6979584,"q1":6979584,"q2":6979584,"q3":6979584,"max":6979584,"minLabel":"kraken_pipeline:unpackDatabase","maxLabel":"kraken_pipeline:unpackDatabase","q1Label":"kraken_pipeline:unpackDatabase","q2Label":"kraken_pipeline:unpackDatabase","q3Label":"kraken_pipeline:unpackDatabase"},"memUsage":null,"timeUsage":null,"vmem":{"mean":11550720,"min":11550720,"q1":11550720,"q2":11550720,"q3":11550720,"max":11550720,"minLabel":"kraken_pipeline:unpackDatabase","maxLabel":"kraken_pipeline:unpackDatabase","q1Label":"kraken_pipeline:unpackDatabase","q2Label":"kraken_pipeline:unpackDatabase","q3Label":"kraken_pipeline:unpackDatabase"},"reads":{"mean":27968776,"min":27968776,"q1":27968776,"q2":27968776,"q3":27968776,"max":27968776,"minLabel":"kraken_pipeline:unpackDatabase","maxLabel":"kraken_pipeline:unpackDatabase","q1Label":"kraken_pipeline:unpackDatabase","q2Label":"kraken_pipeline:unpackDatabase","q3Label":"kraken_pipeline:unpackDatabase"},"cpu":{"mean":19.3,"min":19.3,"q1":19.3,"q2":19.3,"q3":19.3,"max":19.3,"minLabel":"kraken_pipeline:unpackDatabase","maxLabel":"kraken_pipeline:unpackDatabase","q1Label":"kraken_pipeline:unpackDatabase","q2Label":"kraken_pipeline:unpackDatabase","q3Label":"kraken_pipeline:unpackDatabase"},"time":{"mean":4385,"min":4385,"q1":4385,"q2":4385,"q3":4385,"max":4385,"minLabel":"kraken_pipeline:unpackDatabase","maxLabel":"kraken_pipeline:unpackDatabase","q1Label":"kraken_pipeline:unpackDatabase","q2Label":"kraken_pipeline:unpackDatabase","q3Label":"kraken_pipeline:unpackDatabase"},"writes":{"mean":34237794,"min":34237794,"q1":34237794,"q2":34237794,"q3":34237794,"max":34237794,"minLabel":"kraken_pipeline:unpackDatabase","maxLabel":"kraken_pipeline:unpackDatabase","q1Label":"kraken_pipeline:unpackDatabase","q2Label":"kraken_pipeline:unpackDatabase","q3Label":"kraken_pipeline:unpackDatabase"}},{"cpuUsage":{"mean":38.7,"min":38.7,"q1":38.7,"q2":38.7,"q3":38.7,"max":38.7,"minLabel":"kraken_pipeline:determine_bracken_length","maxLabel":"kraken_pipeline:determine_bracken_length","q1Label":"kraken_pipeline:determine_bracken_length","q2Label":"kraken_pipeline:determine_bracken_length","q3Label":"kraken_pipeline:determine_bracken_length"},"process":"determine_bracken_length","mem":{"mean":1032192,"min":1032192,"q1":1032192,"q2":1032192,"q3":1032192,"max":1032192,"minLabel":"kraken_pipeline:determine_bracken_length","maxLabel":"kraken_pipeline:determine_bracken_length","q1Label":"kraken_pipeline:determine_bracken_length","q2Label":"kraken_pipeline:determine_bracken_length","q3Label":"kraken_pipeline:determine_bracken_length"},"memUsage":null,"timeUsage":null,"vmem":{"mean":3997696,"min":3997696,"q1":3997696,"q2":3997696,"q3":3997696,"max":3997696,"minLabel":"kraken_pipeline:determine_bracken_length","maxLabel":"kraken_pipeline:determine_bracken_length","q1Label":"kraken_pipeline:determine_bracken_length","q2Label":"kraken_pipeline:determine_bracken_length","q3Label":"kraken_pipeline:determine_bracken_length"},"reads":{"mean":78483,"min":78483,"q1":78483,"q2":78483,"q3":78483,"max":78483,"minLabel":"kraken_pipeline:determine_bracken_length","maxLabel":"kraken_pipeline:determine_bracken_length","q1Label":"kraken_pipeline:determine_bracken_length","q2Label":"kraken_pipeline:determine_bracken_length","q3Label":"kraken_pipeline:determine_bracken_length"},"cpu":{"mean":38.7,"min":38.7,"q1":38.7,"q2":38.7,"q3":38.7,"max":38.7,"minLabel":"kraken_pipeline:determine_bracken_length","maxLabel":"kraken_pipeline:determine_bracken_length","q1Label":"kraken_pipeline:determine_bracken_length","q2Label":"kraken_pipeline:determine_bracken_length","q3Label":"kraken_pipeline:determine_bracken_length"},"time":{"mean":74,"min":74,"q1":74,"q2":74,"q3":74,"max":74,"minLabel":"kraken_pipeline:determine_bracken_length","maxLabel":"kraken_pipeline:determine_bracken_length","q1Label":"kraken_pipeline:determine_bracken_length","q2Label":"kraken_pipeline:determine_bracken_length","q3Label":"kraken_pipeline:determine_bracken_length"},"writes":{"mean":255,"min":255,"q1":255,"q2":255,"q3":255,"max":255,"minLabel":"kraken_pipeline:determine_bracken_length","maxLabel":"kraken_pipeline:determine_bracken_length","q1Label":"kraken_pipeline:determine_bracken_length","q2Label":"kraken_pipeline:determine_bracken_length","q3Label":"kraken_pipeline:determine_bracken_length"}},{"cpuUsage":{"mean":26.8,"min":26.8,"q1":26.8,"q2":26.8,"q3":26.8,"max":26.8,"minLabel":"kraken_pipeline:unpackTaxonomy","maxLabel":"kraken_pipeline:unpackTaxonomy","q1Label":"kraken_pipeline:unpackTaxonomy","q2Label":"kraken_pipeline:unpackTaxonomy","q3Label":"kraken_pipeline:unpackTaxonomy"},"process":"unpackTaxonomy","mem":{"mean":5091328,"min":5091328,"q1":5091328,"q2":5091328,"q3":5091328,"max":5091328,"minLabel":"kraken_pipeline:unpackTaxonomy","maxLabel":"kraken_pipeline:unpackTaxonomy","q1Label":"kraken_pipeline:unpackTaxonomy","q2Label":"kraken_pipeline:unpackTaxonomy","q3Label":"kraken_pipeline:unpackTaxonomy"},"memUsage":null,"timeUsage":null,"vmem":{"mean":7704576,"min":7704576,"q1":7704576,"q2":7704576,"q3":7704576,"max":7704576,"minLabel":"kraken_pipeline:unpackTaxonomy","maxLabel":"kraken_pipeline:unpackTaxonomy","q1Label":"kraken_pipeline:unpackTaxonomy","q2Label":"kraken_pipeline:unpackTaxonomy","q3Label":"kraken_pipeline:unpackTaxonomy"},"reads":{"mean":60093193,"min":60093193,"q1":60093193,"q2":60093193,"q3":60093193,"max":60093193,"minLabel":"kraken_pipeline:unpackTaxonomy","maxLabel":"kraken_pipeline:unpackTaxonomy","q1Label":"kraken_pipeline:unpackTaxonomy","q2Label":"kraken_pipeline:unpackTaxonomy","q3Label":"kraken_pipeline:unpackTaxonomy"},"cpu":{"mean":26.8,"min":26.8,"q1":26.8,"q2":26.8,"q3":26.8,"max":26.8,"minLabel":"kraken_pipeline:unpackTaxonomy","maxLabel":"kraken_pipeline:unpackTaxonomy","q1Label":"kraken_pipeline:unpackTaxonomy","q2Label":"kraken_pipeline:unpackTaxonomy","q3Label":"kraken_pipeline:unpackTaxonomy"},"time":{"mean":15599,"min":15599,"q1":15599,"q2":15599,"q3":15599,"max":15599,"minLabel":"kraken_pipeline:unpackTaxonomy","maxLabel":"kraken_pipeline:unpackTaxonomy","q1Label":"kraken_pipeline:unpackTaxonomy","q2Label":"kraken_pipeline:unpackTaxonomy","q3Label":"kraken_pipeline:unpackTaxonomy"},"writes":{"mean":422421213,"min":422421213,"q1":422421213,"q2":422421213,"q3":422421213,"max":422421213,"minLabel":"kraken_pipeline:unpackTaxonomy","maxLabel":"kraken_pipeline:unpackTaxonomy","q1Label":"kraken_pipeline:unpackTaxonomy","q2Label":"kraken_pipeline:unpackTaxonomy","q3Label":"kraken_pipeline:unpackTaxonomy"}},{"cpuUsage":{"mean":46,"min":46,"q1":46,"q2":46,"q3":46,"max":46,"minLabel":"fastcat (1)","maxLabel":"fastcat (1)","q1Label":"fastcat (1)","q2Label":"fastcat (1)","q3Label":"fastcat (1)"},"process":"fastcat","mem":{"mean":10792960,"min":10792960,"q1":10792960,"q2":10792960,"q3":10792960,"max":10792960,"minLabel":"fastcat (1)","maxLabel":"fastcat (1)","q1Label":"fastcat (1)","q2Label":"fastcat (1)","q3Label":"fastcat (1)"},"memUsage":null,"timeUsage":null,"vmem":{"mean":386371584,"min":386371584,"q1":386371584,"q2":386371584,"q3":386371584,"max":386371584,"minLabel":"fastcat (1)","maxLabel":"fastcat (1)","q1Label":"fastcat (1)","q2Label":"fastcat (1)","q3Label":"fastcat (1)"},"reads":{"mean":2871695179,"min":2871695179,"q1":2871695179,"q2":2871695179,"q3":2871695179,"max":2871695179,"minLabel":"fastcat (1)","maxLabel":"fastcat (1)","q1Label":"fastcat (1)","q2Label":"fastcat (1)","q3Label":"fastcat (1)"},"cpu":{"mean":138,"min":138,"q1":138,"q2":138,"q3":138,"max":138,"minLabel":"fastcat (1)","maxLabel":"fastcat (1)","q1Label":"fastcat (1)","q2Label":"fastcat (1)","q3Label":"fastcat (1)"},"time":{"mean":59185,"min":59185,"q1":59185,"q2":59185,"q3":59185,"max":59185,"minLabel":"fastcat (1)","maxLabel":"fastcat (1)","q1Label":"fastcat (1)","q2Label":"fastcat (1)","q3Label":"fastcat (1)"},"writes":{"mean":2118666270,"min":2118666270,"q1":2118666270,"q2":2118666270,"q3":2118666270,"max":2118666270,"minLabel":"fastcat (1)","maxLabel":"fastcat (1)","q1Label":"fastcat (1)","q2Label":"fastcat (1)","q3Label":"fastcat (1)"}},{"cpuUsage":null,"process":"kraken_server","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":null,"cpu":null,"time":null,"writes":null},{"cpuUsage":null,"process":"kraken2_client","mem":null,"memUsage":null,"timeUsage":null,"vmem":null,"reads":null,"cpu":null,"time":null,"writes":null}]
+Jan-25 10:07:41.983 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Jan-25 10:07:42.080 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Jan-25 10:07:42.137 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
